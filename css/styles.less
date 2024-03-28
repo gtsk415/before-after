@@ -13,8 +13,8 @@ body {
 }
 
 .slider {
-  width: 1024px;
-  height: 512px;
+  width: 512px;
+  height: 1024px;
   position: relative;
   background: lightgray;
 
@@ -28,19 +28,37 @@ body {
   }
 
   &__after {
-    width: 1024px;
-    height: 512px;
+    width: 512px;
+    height: 1024px;
     position: absolute;
     background: url('./../img/after.jpg') no-repeat center center fixed;
     background-size: cover;
   }
 
   &__resize {
-    width:5px;
+    height:5px;
     position: absolute;
-    height: 100%;
+    width: 100%;
     background-color: black;
-    right: 0;
-    top: 0;
+    left: 0;
+    top: 100%;
+    cursor: row-resize;
+
+    &:before {
+      content: '˄';
+      position: absolute;
+      font-size: 30px;
+      font-weight: 900;
+      left: 50%;
+      bottom: 10%;
+    }
+
+    &:after {
+      content: '˅';
+      position: absolute;
+      font-size: 30px;
+      font-weight: 900;
+      left: 50%;
+    }
   }
 }
