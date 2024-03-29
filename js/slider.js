@@ -31,7 +31,9 @@ class Slider {
   }
   
   mouseDownHandler(event) {
-    if(event.target.dataset.type === 'resize')
+    if(event.target.dataset.type === 'resize') {
+      this.$slider.addEventListener
+    }
   }
 
   mouseUpHandler(event) {
