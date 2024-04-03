@@ -2,10 +2,10 @@
 
 function getTempalte(state) {
   return `
-    <div class="slider__before" style="height: ${state.height}px; background-image: url("${state.before}")">
+    <div class="slider__before" style="height: ${state.height}px; background-image: url(${state.before})">
       <div class="slider__resize" data-type="resize"></div>
     </div>
-    <div class="slider__after" style="background-image: url("${state.after}")"></div>
+    <div class="slider__after" style="background-image: url(${state.after})"></div>
   `
 }
 
@@ -53,15 +53,15 @@ class Slider {
   }
 
   moveHandler(event) {
-    let newClientX = this.currentClientX - event.clientX;
+    let newClientX = this.currentClientX - event.clientX
     this.#update({width: this.state.width - newClientX})
-    this.currentClientX = event.clietnX;
+    this.currentClientX = event.clietnX
   }
 
 }
 
 const slider = new Slider("slider", {
   after: './../img/after.jpg',
-  before
+  before: './../img/before.jpg',
 })
 
